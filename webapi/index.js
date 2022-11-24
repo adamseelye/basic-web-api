@@ -9,8 +9,8 @@ app.get('/', (req, res) => {
     res.json('Welcome to Web API')
 })
 
-app.get('/content', (req, res) =>{
-    axios.get('<add URL here>')
+app.get('/news', (req, res) =>{
+    axios.get('https://www.theguardian.com/environment/climate-crisis')
         .then((response) => {
             const html = response.data
             console.log(html)
